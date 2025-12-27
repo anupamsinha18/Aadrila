@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap');
+
+.contact-section {
+    position: relative;
+    padding: 120px 0px 0;
+    background-image: url('../assets/contact-bg.png');
+    background-size: cover;
+    background-position: center;
+  }
+
+  .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 60px;
+    position: relative;
+    z-index: 2;
+  }
+
+.contact-info {
+  flex: 1;
+  color: #111;
+}
+
+.contact-info h2 {
+    margin-bottom: 16px;
+    font-family: Raleway;
+    font-weight: 600;
+    font-size: 48px;
+    color: #141219;
+}
+
+.contact-desc {
+  line-height: 28px;
+  font-family: Manrope;
+font-weight: 400;
+font-size: 20px;
+background: linear-gradient(90deg, #CD6028 11%, #3E6EB4 100%);
+
+-webkit-background-clip: text;
+background-clip: text;
+
+-webkit-text-fill-color: transparent;
+color: transparent;
+}
+
+
+.contact-address {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.address-block h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.address-block p {
+  font-size: 14px;
+  line-height: 14px;
+  color: #444;
+}
+
+.contact-form-card {
+    flex: 1;
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 80px 50px; 
+       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+    margin-bottom: -210px;  
+    z-index: 3;
+  }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 93%;
+  padding: 16px 24px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-family: Manrope;
+  font-size: 14px;
+}
+
+.contact-form textarea {
+  min-height: 190px;
+  resize: none;
+}
+
+.contact-form button {
+  margin-top: 12px;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  background: #3e6eb4;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #345fa1;
+}
+
+.contact-footer {
+    background: #3e6eb4;
+    padding: 140px 24px 40px;
+    margin-top: 50px;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #ffffff;
+    font-family: Manrope;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .contact-container {
+      flex-direction: column;
+    }
+  
+    .contact-form-card {
+      margin-bottom: -80px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-form-card {
+      padding: 28px 20px;
+      margin-bottom: -60px;
+    }
+  
+    .footer-content {
+      font-size: 13px;
+    }
+  }
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-info,
+  .contact-form-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-info h2 {
+    font-size: 28px;
+  }
+  .contact-form input, .contact-form textarea{
+    width: 80%;
+  }
+  .form-row {
+    flex-direction: column;
+  }
+
+  .contact-form-card {
+    padding: 28px 0px;
+  }
+}

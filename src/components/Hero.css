@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Raleway:wght@400;500;600;700&display=swap');
+.hero-section-full {
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Background image covers the entire screen */
+  .bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image doesn't stretch weirdly */
+    z-index: -1; /* Puts it behind the content */
+  }
+  
+  /* Navbar stays on top */
+ /* ================= NAVBAR ================= */
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background: transparent;
+    z-index: 1000;
+  }
+  
+  .logo-icon {
+    width: 170px;
+  }
+  
+  /* LINKS */
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+  }
+  
+  .nav-links a {
+    font-family: Manrope, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    color: #1e1c26;
+  }
+  
+  .nav-links a.active {
+    color: #4475be;
+  }
+  .mobile-cta{
+    display: none;
+  }
+  
+  /* CTA */
+  .btn-demo {
+    background: #3e6eb4;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .btn-demo:hover {
+    background: #355d9a;
+    font-family: Raleway;
+  }
+  
+  /* ================= HAMBURGER ================= */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .hamburger span {
+    width: 26px;
+    height: 3px;
+    background: #1e1c26;
+    transition: all 0.3s ease;
+  }
+  
+  /* ================= MOBILE ================= */
+
+  
+  /* ================= HAMBURGER ANIMATION ================= */
+  .hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+  
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+  
+  .hero-container {
+    min-height: 85vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    width: 100%;
+  }
+  
+  /* --- Left Side Styling --- */
+  .hero-text-section {
+    flex: 1;
+
+    font-family: Raleway;
+font-weight: 700;
+font-size: 48px;
+letter-spacing: 0px;
+vertical-align: middle;
+
+  }
+  
+  .hero-subtitle {
+    background: linear-gradient(90deg, #CD6028 11%, #3E6EB4 100%);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+  
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+       font-size: 48px;
+    font-weight: 700;
+  line-height: 68px;
+  }
+  
+  .hero-title {
+    color: #1a1a1a;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-description {
+    font-family: Manrope;
+    font-weight: 500;
+
+    font-size: 20px;
+    line-height: 31.2px;
+    letter-spacing: 0px;
+    margin-bottom: 34px;
+    width: 85%;
+    color: #1E1C26;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 40px;
+ 
+font-weight: 600;
+font-size: 16px;
+line-height: 20px;
+letter-spacing: 0px;
+text-align: center;
+
+
+  }
+  
+  .btn {
+    font-family: Raleway;
+    padding: 16px 95px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s ease;
+  }
+  
+  .btn:hover {
+    transform: translateY(-2px);
+  }
+  
+  .btn-primary {
+    background-color: #3E6EB4;
+    color: white;
+  }
+  
+  .btn-secondary {
+    background-color: #3E6EB4;
+    color: white;
+    /* Adjust transparency or shade if needed for secondary */
+  }
+  
+  .hero-visual-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    height: 500px; /* Adjust based on your image sizes */
+    position: relative;
+  }
+  
+  .floating-cards-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .card {
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  /* THE MAIN CENTER CARD */
+  .card-main {
+    width: 380px;
+    z-index: 10;           /* Highest layer */
+    top: 55%;
+    left: 52%;
+    transform: translate(-50%, -50%); /* Perfectly centered */
+  }
+  
+  /* THE LEFT BACKGROUND CARD */
+  .card-left {
+    width: 200px;
+    z-index: 5;            /* Middle layer */
+    top: 34%;              /* Higher up than center */
+    left: -2%;              /* Pulled to the left */
+    filter: blur(1.5px);   /* Creates depth of field */
+    opacity: 0.9;
+  }
+  
+  /* THE RIGHT BACKGROUND CARD */
+  .card-right {
+    width: 180px;
+    z-index: 2;            
+    top: 35%;             
+    right: -4%;            
+    opacity: 0.7;
+  }
+  
+
+ /* Tablet & Smaller Laptops (1145px and below) */
+@media screen and (max-width: 1145px) {
+    .hero-section-full {
+      height: auto; /* Allow the page to grow with content */
+      overflow-y: auto;
+    }
+  
+    .hero-container {
+      height: 100%;
+      /* Space for the absolute navbar */
+    }
+  
+    .hero-content {
+      /* column-reverse moves the Image (2nd div) to the TOP */
+      flex-direction: column; 
+      text-align: center;
+      padding: 20px 40px;
+      gap: 60px; /* Space between visual and text */
+    }
+  
+    .hero-text-section {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centers text and buttons horizontally */
+      padding-bottom: 200px;
+    }
+  
+    .hero-description {
+      width: 100%;
+      margin-inline: auto;
+      font-size: 18px;
+    }
+  
+    .hero-buttons {
+      justify-content: center;
+      width: 100%;
+    }
+  
+    .hero-title {
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      margin-bottom: 1rem;
+    }
+  
+    .hero-subtitle {
+      font-size: clamp(28px, 4vw, 38px);
+      line-height: 1.2;
+    }
+  
+    /* Image Area Adjustments */
+    .hero-visual-section {
+      width: 100%;
+      height: 300px; /* Reduced height for better mobile flow */
+      margin-bottom: 0;
+    }
+  
+    .card-main {
+      width: 280px;
+      left: 50%;
+      top: 50%;
+    }
+  
+    .card-left {
+      width: 150px;
+      left: 5%;
+      top: 20%;
+    }
+  
+    .card-right {
+      width: 130px;
+      right: 5%;
+      top: 15%;
+    }
+    .navbar {
+        padding: 16px 20px;
+      }
+    
+      .hamburger {
+        display: flex;
+      }
+    
+      .cta-section {
+        display: none;
+      }
+    
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+    
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+    
+        padding: 30px 0;
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(20px);
+    
+        display: none;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+      }
+    
+      .nav-links.show {
+        display: flex;
+      }
+    
+      .nav-links a {
+        font-size: 18px;
+      }
+    
+      .mobile-cta {
+        margin-top: 10px;
+      }
+  }
+
+  
+  /* Mobile Devices (768px and below) */
+  @media screen and (max-width: 768px) {
+    .navbar {
+      padding: 20px 5%;
+    }
+    .hero-text-section{
+        padding-bottom: 200px;
+    }
+    .hero-content {
+      flex-direction: column; /* Keeps images on top */
+      gap: 40px;
+    }
+    
+    .hero-title {
+      font-size: 1.8rem;
+    }
+  
+    .hero-buttons {
+      flex-direction: column; 
+      width: 100%;
+      gap: 15px;
+    }
+  
+    .btn {
+      width: 100%;
+      padding: 16px 20px;
+    }
+  
+    .hero-visual-section {
+      height: 250px;
+    }
+  
+    .card-main { width: 220px;         left: 53%; }
+    .card-left { width: 106px;  left: -1%;
+     }
+    .card-right { width: 100px;right: -5%; }
+  }
+  @media screen and (max-width: 480px) {
+    .card-left{
+      width: 80px;
+      left: -2%;
+      top: 20%;
+    }
+  .card-main{
+    width: 180px;
+  }
+  .card-right{
+    width: 80px;
+    right: -7%;
+  }
+  }

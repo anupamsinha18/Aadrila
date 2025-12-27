@@ -1,0 +1,143 @@
+.industries-bg-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../assets/Industries.png"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.industry-card {
+  position: absolute;
+  width: 320px;
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 40px 32px;
+  text-align: center;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.18), 0 0 0 14px rgba(255, 255, 255, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.industry-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 50px 90px rgba(0, 0, 0, 0.22), 0 0 0 16px rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 768px) {}
+
+/* =============================== ICON ================================ */
+.icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.industry-card h3 {
+  font-family: "Manrope", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 14px;
+}
+
+.industry-card p {
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #6b7280;
+  margin: 0;
+}
+
+.insurance {
+  bottom: 80px;
+  left: 120px;
+}
+
+.lending {
+  top: 260px;
+  left: 540px;
+}
+
+.healthcare {
+  top: 50px;
+  right: 80px;
+}
+
+@media (max-width: 1200px) {
+  .industries-bg-section {
+    min-height: 700px;
+  }
+
+  .insurance {
+    bottom: 60px;
+    left: 80px;
+  }
+
+  .lending {
+    top: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .healthcare {
+    top: 100px;
+    right: 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .industries-bg-section {
+    background-position: top center;
+    min-height: auto;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .industry-card {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    margin-bottom: 32px;
+    transform: none !important;
+  }
+
+  .insurance,
+  .lending,
+  .healthcare {
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .industries-bg-section {
+    padding-top: 0px;
+  }
+
+  .industry-card {
+    padding: 32px 24px;
+  }
+
+  .industry-card h3 {
+    font-size: 20px;
+  }
+
+  .industry-card p {
+    font-size: 14px;
+  }
+}
